@@ -40,6 +40,10 @@ public class Book {
         return isAvailable;
     }
 
+    public Queue<Reader> getWaitingList() {
+        return waitingList;
+    }
+
     void addPersonToWaitingList(Reader reader){
         waitingList.add(reader);
     }
@@ -53,5 +57,8 @@ public class Book {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return title + " by " + author;
+    }
 }
