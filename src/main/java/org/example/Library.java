@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Library {
     Map<String, Book> books = new HashMap<>();
-    Set<Reader> readers = new HashSet<>();
+    private Set<Reader> readers = new HashSet<>();
     Set<String> authors = new HashSet<>();
     Set<String> genres = new HashSet<>();
 
@@ -29,6 +29,7 @@ public class Library {
         readers.add(reader);
         }
         else {
+            readers.add(reader);
             book.addPersonToWaitingList(reader);
         }
     }
@@ -49,5 +50,28 @@ public class Library {
         }
     }
 
+    void showBooks(){
+        books.values().forEach((element) -> {
+            System.out.println(element.toString());
+        });
+    }
+
+    void allAuthors(){
+        authors.forEach((element) -> {
+            System.out.println(element.toString());
+        });
+    }
+
+    void allGenres(){
+        genres.forEach((element) -> {
+            System.out.println(element.toString());
+        });
+    }
+
+    void getAllReaders(){
+        readers.forEach((element) -> {
+            System.out.println(element.toString());
+        });
+    }
 
 }

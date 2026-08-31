@@ -20,6 +20,15 @@ public class Main {
         library.borrowBookByTitle("Grokking Algorithms", Alex);
         Alex.showBorrowedBooks();
 
+        library.showBooks();
+        library.allAuthors();
+        library.allGenres();
+        library.getAllReaders();
+
+        library.removeBook("Clean code");
+        library.showBooks();
+
+
 
 
     }
